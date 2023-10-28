@@ -25,18 +25,15 @@ struct RootView: View {
         Label("Home", systemImage: "house")
       }
       
-        
-      .tabItem {
-        Label("Home", systemImage: "house")
-      }
-      
-      Text("Dummy View")
-        .tabItem {
-          Label("2", systemImage: "house")
-        }
-        
           NavigationStack {
               Notifications()
+            }
+            .tabItem {
+              Label("Notifications", systemImage: "bell")
+            }
+        
+          NavigationStack {
+              Explore()
             }
             .tabItem {
               Label("Explore", systemImage: "figure.hiking")
