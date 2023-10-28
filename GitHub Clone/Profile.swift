@@ -95,35 +95,41 @@ struct Profile: View {
                     
                   ForEach(myWorkRows) { row in
                       NavigationLink {
-                          Text("hawdy")
+                          
                       } label: {
-                         
-                      
-                    makeRow(row: row)
+                          
+                          
+                          makeRow(row: row)
+                      }
                     if myWorkRows.last?.id != row.id {
                       Divider()
                         .padding(.leading)
                     }
                       
-                      }
+                      
 
                   }
                 }
                 .padding(.vertical)
                 .background(.white.opacity(0.75))
-                .cornerRadius(8)
+                .cornerRadius(0)
                 
                 
-                
+                HStack{
+                    Image(systemName: "pin.fill")
+                    Text("pinned")
+                }.foregroundColor(Color(uiColor: .secondaryLabel)).frame(maxWidth: .infinity, alignment: .leading).padding(.horizontal)
                 
                 ScrollView(.horizontal, showsIndicators: false){
                     
                     HStack{
-                        RoundedRectangle(cornerRadius: 25.0).frame(width: 200,height: 200)
+                        
+                        
                         RoundedRectangle(cornerRadius: 25.0).frame(width: 200,height: 200)
                         RoundedRectangle(cornerRadius: 25.0).frame(width: 200,height: 200)
                         
                     }.padding()
+                    
                 }
             }
             

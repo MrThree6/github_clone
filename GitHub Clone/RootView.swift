@@ -9,7 +9,15 @@ import SwiftUI
 
 struct RootView: View {
   var body: some View {
-    TabView {
+      NavigationStack{
+          
+          Auth()
+      }
+      
+      
+      TabView {
+        
+        
       NavigationStack {
         HomeView()
       }
@@ -28,7 +36,7 @@ struct RootView: View {
         }
         
           NavigationStack {
-              Explore()
+              Notifications()
             }
             .tabItem {
               Label("Explore", systemImage: "figure.hiking")
